@@ -1,0 +1,11 @@
+---
+- hosts: agent1
+  user:	test
+  sudo: yes
+  connection: ssh
+  gather-facts: no
+
+  tasks: 
+  - name: install httpd server
+    yum: name=httpd state=installed
+
